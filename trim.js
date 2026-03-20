@@ -18,6 +18,8 @@
         [...nodes].reverse().slice(10).forEach(node => {
             node.style.display = 'none';
         });
+
+        button.remove();
     };
 
     const button = document.createElement('button');
