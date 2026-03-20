@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ChatGPT Trim
 // @namespace    https://github.com/PuppyOne/chatgpt-conversations-trim
-// @version      0.1.0
+// @version      0.2.0
 // @description  trim ChatGPT conversations for better performance
 // @author       Puppyone
 // @run-at       document-idle
@@ -16,7 +16,7 @@
         const nodes = document.querySelectorAll("#thread > div > div.relative.flex > div.flex > section");
 
         [...nodes].reverse().slice(10).forEach(node => {
-            node.style.display = 'none';
+            node.remove();
         });
 
         button.remove();
